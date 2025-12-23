@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReelStyle | From Reel to Real</title>
+    <meta
+      name="description"
+      content="ReelStyle Shop Hub – shop the exact outfits from your favorite reality shows and series."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page" id="top">
+      <header class="hero">
+        <div class="hero-brand">
+          <h1 class="hero-title">ReelStyle</h1>
+          <p class="hero-tagline">From Reel to Real</p>
+        </div>
+        <p class="hero-text">
+          Shop the exact outfits from your favorite TV shows and series.
+        </p>
+      </header>
+
+      <main class="main">
+        <section class="section section-accent">
+          <h2 class="section-title">Latest TikTok Outfits</h2>
+          <div class="card-list">
+            <article class="card">
+              <h3 class="card-show">Emily in Paris – Emily Cooper</h3>
+              <p class="card-outfit">Marc Jacobs Black Cross Strap Silk Midi Dress</p>
+              <p style="margin: 0; font-size: 0.9rem; color: #44596e;">
+                Chic, minimalist, and effortlessly powerful — Parisian main character energy.
+              </p>
+              <a
+                class="btn primary-btn"
+                href="https://www.nordstrom.com/s/6821865"
+                target="_blank"
+                rel="noopener"
+              >
+                Shop this look
+              </a>
+            </article>
+
+            <article class="card">
+              <h3 class="card-show">Emily in Paris – Mindy Chen</h3>
+              <p class="card-outfit">BetterMe Purple Short Sculpted Catsuit</p>
+              <p style="margin: 0; font-size: 0.9rem; color: #44596e;">
+                Bold, sculpting, and effortlessly cool — a look made to be seen and remembered.
+              </p>
+              <a
+                class="btn primary-btn"
+                href="https://store.betterme.world/products/sleek-shorts-catsuit-lavender"
+                target="_blank"
+                rel="noopener"
+              >
+                Shop this look
+              </a>
+            </article>
+
+            <article class="card">
+              <h3 class="card-show">Secret Lives of Mormon Wives – Taylor Frankie Paul</h3>
+              <p class="card-outfit">Blue Nalli Adalyn Maxi Dress</p>
+              <p style="margin: 0; font-size: 0.9rem; color: #44596e;">
+                Soft, romantic, and the ultimate blue-era statement moment.
+              </p>
+              <a
+                class="btn primary-btn"
+                href="https://neptunesboutique.com/products/nalli-adalyn-maxi-dress"
+                target="_blank"
+                rel="noopener"
+              >
+                Shop this look
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section-accent">
+          <h2 class="section-title">Browse by Show</h2>
+          <div class="pill-grid">
+            <a href="secret-lives.html" class="pill">Secret Lives of Mormon Wives</a>
+            <a href="emily-in-paris.html" class="pill">Emily in Paris</a>
+            <a href="selling-sunset.html" class="pill">Selling Sunset</a>
+            <a href="love-island-uk-allstars.html" class="pill">Love Island UK – All Stars</a>
+            <a href="stranger-things.html" class="pill">Stranger Things</a>
+            <a href="selling-the-oc.html" class="pill">Selling the OC</a>
+          </div>
+        </section>
+
+        <section class="section section-accent">
+          <h2 class="section-title">Shows Coming Soon</h2>
+          <div
+            style="
+              background: rgba(255, 255, 255, 0.8);
+              border-radius: 16px;
+              padding: 14px 14px 12px;
+              box-shadow: 0 6px 16px rgba(12, 61, 97, 0.05);
+            "
+          >
+            <p style="margin: 0 0 10px; font-size: 0.9rem; color: #6a7a8f;">
+              Stay tuned for new outfits from these shows:
+            </p>
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                justify-content: center;
+              "
+            >
+              <span
+                style="
+                  padding: 6px 12px;
+                  border-radius: 999px;
+                  background: #f3f4f6;
+                  font-size: 0.82rem;
+                  color: #6a7a8f;
+                "
+              >
+                The Bachelorette
+              </span>
+              <span
+                style="
+                  padding: 6px 12px;
+                  border-radius: 999px;
+                  background: #f3f4f6;
+                  font-size: 0.82rem;
+                  color: #6a7a8f;
+                "
+              >
+                The Traitors
+              </span>
+              <span
+                style="
+                  padding: 6px 12px;
+                  border-radius: 999px;
+                  background: #f3f4f6;
+                  font-size: 0.82rem;
+                  color: #6a7a8f;
+                "
+              >
+                Love Island USA
+              </span>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <p class="footer-handle">@reel_stylez</p>
+        <p class="footer-note">
+          Links may be affiliate links. Thank you for supporting ReelStyle 💛
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const sections = document.querySelectorAll('.section-accent');
+        if (!('IntersectionObserver' in window) || !sections.length) return;
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+                entry.target.classList.add('active-section');
+              } else {
+                entry.target.classList.remove('active-section');
+              }
+            });
+          },
+          {
+            threshold: [0, 0.3, 0.6, 1],
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+      })();
+    </script>
+  </body>
+</html>
