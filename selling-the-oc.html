@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QJRLEPNNF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-0QJRLEPNNF');
+    </script>
     <title>ReelStyle | Selling the OC</title>
     <meta
       name="description"
@@ -38,7 +48,9 @@
                 Episode 2: Full Frontal Views
               </p>
               <a
-                class="btn primary-btn"
+                class="btn primary-btn shop-link"
+                data-show="Selling the OC"
+                data-item="Alex Hall — Emprada Red Plunge Draped Long Sleeve Midi Dress"
                 href="https://www.emprada.com/products/celeste-red-v-plunge-drape-dress"
                 target="_blank"
                 rel="noopener"
@@ -53,7 +65,9 @@
                 Episode 6: Seeking Arrangements
               </p>
               <a
-                class="btn primary-btn"
+                class="btn primary-btn shop-link"
+                data-show="Selling the OC"
+                data-item="Fiona Belle — Show Me Your Mumu White Contrast Trim Cardigan"
                 href="https://www.revolve.com/kit-cardi/dp/SHOW-WK200/?AID=11017645&PID=7900573"
                 target="_blank"
                 rel="noopener"
@@ -68,7 +82,9 @@
                 Episode 6: Seeking Arrangements
               </p>
               <a
-                class="btn primary-btn"
+                class="btn primary-btn shop-link"
+                data-show="Selling the OC"
+                data-item="Fiona Belle — White Contrast Trim Knit Mini Skirt"
                 href="https://www.revolve.com/kit-skirt/dp/SHOW-WQ103/?AID=11017645&PID=7900573"
                 target="_blank"
                 rel="noopener"
@@ -83,7 +99,9 @@
                 Episode 1: Last Alex Standing
               </p>
               <a
-                class="btn primary-btn"
+                class="btn primary-btn shop-link"
+                data-show="Selling the OC"
+                data-item="Alex Hall — Superdown Pink Butterfly Print Long Sleeve Mesh Top"
                 href="https://www.revolve.com/ari-butterfly-mesh-top/dp/SPDW-WS1694/?AID=11017645&PID=7900573"
                 target="_blank"
                 rel="noopener"
@@ -98,7 +116,9 @@
                 Episode 7: Secrets, Sage, and Sandcastles
               </p>
               <a
-                class="btn primary-btn"
+                class="btn primary-btn shop-link"
+                data-show="Selling the OC"
+                data-item="Alex Hall — Green Printed Mesh Long Sleeve Top"
                 href="https://amzn.to/4oLNYto"
                 target="_blank"
                 rel="noopener"
@@ -113,7 +133,9 @@
                 Episode 1: Last Alex Standing
               </p>
               <a
-                class="btn primary-btn"
+                class="btn primary-btn shop-link"
+                data-show="Selling the OC"
+                data-item="Fiona Belle — Show Me Your Mumu Red/Pink Chevron Knit Cut Out Midi Dress"
                 href="https://amzn.to/4p8wiHZ"
                 target="_blank"
                 rel="noopener"
@@ -128,7 +150,9 @@
                 Episode 4: Hall’s Fair in Love &amp; War
               </p>
               <a
-                class="btn primary-btn"
+                class="btn primary-btn shop-link"
+                data-show="Selling the OC"
+                data-item="Alex Hall — Rebellious Rose Green Tie Dye Sleeveless Mini Dress"
                 href="https://poshmark.com/listing/662fdd52147b983763fdac89"
                 target="_blank"
                 rel="noopener"
@@ -143,7 +167,9 @@
                 Episode 1: Last Alex Standing
               </p>
               <a
-                class="btn primary-btn"
+                class="btn primary-btn shop-link"
+                data-show="Selling the OC"
+                data-item="Alex Hall — Babyboo Brown Tailored Plunge Mini Dress Dupe"
                 href="https://amzn.to/3LJ9nEQ"
                 target="_blank"
                 rel="noopener"
@@ -158,7 +184,9 @@
                 Episode 1: Last Alex Standing
               </p>
               <a
-                class="btn primary-btn"
+                class="btn primary-btn shop-link"
+                data-show="Selling the OC"
+                data-item="Fiona Belle — Likely Black Tweed Bejeweled Button Mini Dress"
                 href="https://www.revolve.com/riello-dress/dp/LIKR-WD721/?AID=11017645&PID=7900573"
                 target="_blank"
                 rel="noopener"
@@ -177,6 +205,26 @@
         </p>
       </footer>
     </div>
+
+    <script>
+      (function () {
+        document.addEventListener('click', function (event) {
+          var link = event.target.closest('.shop-link');
+          if (!link) return;
+
+          var show = link.getAttribute('data-show') || '';
+          var item = link.getAttribute('data-item') || '';
+
+          if (typeof gtag === 'function') {
+            gtag('event', 'shop_click', {
+              show: show,
+              item: item,
+              page_path: location.pathname,
+            });
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
 

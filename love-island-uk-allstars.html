@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QJRLEPNNF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-0QJRLEPNNF');
+    </script>
     <title>ReelStyle | Love Island UK – All Stars</title>
     <meta
       name="description"
@@ -48,6 +58,26 @@
         </p>
       </footer>
     </div>
+
+    <script>
+      (function () {
+        document.addEventListener('click', function (event) {
+          var link = event.target.closest('.shop-link');
+          if (!link) return;
+
+          var show = link.getAttribute('data-show') || '';
+          var item = link.getAttribute('data-item') || '';
+
+          if (typeof gtag === 'function') {
+            gtag('event', 'shop_click', {
+              show: show,
+              item: item,
+              page_path: location.pathname,
+            });
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
 
