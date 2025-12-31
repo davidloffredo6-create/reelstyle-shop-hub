@@ -225,9 +225,9 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  padding: 6px 0;
-  border-top: 1px solid rgba(22, 48, 71, 0.04);
-  transition: background-color 0.14s ease, box-shadow 0.14s ease;
+  padding: 8px 0;
+  border-top: 1px solid rgba(22, 48, 71, 0.09);
+  transition: background-color 0.16s ease, box-shadow 0.16s ease;
 }
 
 .affiliate-row:first-of-type {
@@ -235,8 +235,8 @@ body {
 }
 
 .affiliate-row:hover {
-  background-color: rgba(255, 243, 196, 0.5);
-  box-shadow: 0 6px 18px rgba(202, 170, 60, 0.16);
+  background-color: rgba(255, 243, 196, 0.4);
+  box-shadow: 0 7px 20px rgba(202, 170, 60, 0.14);
 }
 
 .affiliate-row-main {
