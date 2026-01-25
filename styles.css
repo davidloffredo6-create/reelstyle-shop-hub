@@ -260,6 +260,39 @@ body {
   border-top: none;
 }
 
+/* Traitors group headers */
+.traitor-groups {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.person-group {
+  scroll-margin-top: 80px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(22, 48, 71, 0.08);
+}
+
+.person-group:first-child {
+  margin-top: 0;
+  border-top: none;
+}
+
+.person-name {
+  margin: 0 0 8px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #30465b;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  border-left: 4px solid rgba(255, 230, 154, 0.9);
+}
+
 /* Amazon affiliate list */
 .affiliate-list {
   display: flex;
