@@ -230,16 +230,34 @@ body {
 }
 
 .person-title {
-  margin: 0 0 6px;
-  font-size: 0.98rem;
-  font-weight: 600;
+  margin: 0 0 8px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: #30465b;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  border-left: 4px solid rgba(255, 230, 154, 0.9);
 }
 
 .person-placeholder {
   margin: 0;
   font-size: 0.82rem;
   color: #6a7a8f;
+}
+
+/* Love Island All Stars group headers */
+.islander-group {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(22, 48, 71, 0.08);
+}
+
+.islander-group:first-child {
+  margin-top: 0;
+  border-top: none;
 }
 
 /* Amazon affiliate list */
