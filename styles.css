@@ -212,6 +212,36 @@ body {
   line-height: 1.4;
 }
 
+/* Love Island UK – All Stars: Browse by Islander */
+.person-nav {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.person-sections {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.person-section {
+  scroll-margin-top: 80px;
+}
+
+.person-title {
+  margin: 0 0 6px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #30465b;
+}
+
+.person-placeholder {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #6a7a8f;
+}
+
 /* Amazon affiliate list */
 .affiliate-list {
   display: flex;
