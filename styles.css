@@ -293,6 +293,23 @@ body {
   border-left: 4px solid rgba(255, 230, 154, 0.9);
 }
 
+.cast-nav-title {
+  margin: 4px 0 4px;
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: #30465b;
+}
+
+.cast-nav-help {
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  color: #6a7a8f;
+}
+
+.cast-nav {
+  margin-bottom: 10px;
+}
+
 /* Amazon affiliate list */
 .affiliate-list {
   display: flex;
