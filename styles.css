@@ -285,11 +285,10 @@ body {
   padding: 6px 10px;
   font-size: 0.9rem;
   font-weight: 650;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
   color: #30465b;
   background: rgba(255, 255, 255, 0.9);
-  border-radius: 999px;
+  border-radius: 12px;
   border-left: 4px solid rgba(255, 230, 154, 0.9);
 }
 
@@ -308,6 +307,31 @@ body {
 
 .cast-nav {
   margin-bottom: 10px;
+}
+
+/* Traitors polish */
+.cast-nav.pill-grid {
+  gap: 8px;
+}
+
+.cast-nav .pill {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+#the-traitors .person-group {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(22, 48, 71, 0.09);
+}
+
+#the-traitors .person-group:first-child {
+  margin-top: 0;
+  border-top: none;
+}
+
+#the-traitors .person-name {
+  background: rgba(255, 255, 255, 0.96);
 }
 
 /* Amazon affiliate list */
